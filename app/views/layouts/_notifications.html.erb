@@ -1,0 +1,13 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= bootstrap_alert(key) %>">
+    <strong>
+      <%= value %>
+    </strong>
+
+    <script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
+  </div>
+<% end %>
