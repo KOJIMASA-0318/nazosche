@@ -1,5 +1,5 @@
 body {
-  background-color: #ffffff;
+  background-color: #efefef;
 }
 
 /*フラッシュアラート*/
@@ -34,7 +34,6 @@ body {
 }
 
 .fifty-right {
-  background-color: #efefef;
   background-size: cover;
   padding: 5vh;
 }
@@ -93,8 +92,32 @@ width: 120px;
 height: 45px;
 }
 
-/*マイページ*/
+.navbar-bg {
+  background-color: #ffffff;
+}
 
+/*マイページ*/
+.show-wrapper {
+  padding-top: 70px;
+}
+
+.show-container {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu {
+  width: 200px;
+  position: fixed;
+  top: 120px;
+  z-index: 100;
+}
+
+.main {
+  width: 800px;
+  margin: 0 auto;
+}
 
 /*text*/
 .text-white {
