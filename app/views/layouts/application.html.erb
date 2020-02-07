@@ -8,8 +8,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+    <%= render 'layouts/notifications' %>
     <%= yield %>
   </body>
 </html>

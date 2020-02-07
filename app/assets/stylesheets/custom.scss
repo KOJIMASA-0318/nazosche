@@ -2,7 +2,16 @@ body {
   background-color: #ffffff;
 }
 
+/*フラッシュアラート*/
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
 
+
+/*home*/
 @media all and (min-width: 500px) {
   .top-wrapper {
     display: flex;
@@ -32,7 +41,7 @@ body {
 
 .home-title {
   margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 .home-btn{
@@ -47,14 +56,14 @@ body {
 }
 
 .btn {
-  margin-bottom:4vh;
+  margin-bottom:2vh;
 }
 
 .input-form {
-  height: 60vh;
-  padding: 5vh;
+  height: 55vh;
+  padding: 3vh;
   margin: 3vh 5vh;
-  background-color: #708090;
+  background-color: #b0c4de;
   text-align: left;
 
   .form-group {
@@ -67,17 +76,27 @@ body {
 }
 
 .login-form {
-  height: 50vh;
-  padding: 10vh 5vh;
+  height: 40vh;
+  padding: 5vh 5vh;
   margin: 10vh 5vh 5vh 5vh;
-  background-color: #708090;
+  background-color: #b0c4de;
   text-align: left;
 
   .form-group {
-  margin-bottom: 7vh;
+  margin-bottom: 3vh;
   }
 }
 
+/*ナビゲーションバー*/
+.navbar-logo {
+width: 120px;
+height: 45px;
+}
+
+/*マイページ*/
+
+
+/*text*/
 .text-white {
   color:#ffffff;
 }
@@ -88,11 +107,4 @@ body {
 
 .small-letter {
   font-size: small;
-}
-
-.alert {
-  margin-bottom: 0px;
-  position: fixed;
-  width: 100%;
-  z-index: 10000;
 }
