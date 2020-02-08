@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   get 'users/show'
   get 'home/index'
   devise_for :users
