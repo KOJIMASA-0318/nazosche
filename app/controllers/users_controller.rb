@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @user = User.where(:id => params[:user_id]).first
     @user = User.find(params[:id])
-    @events = Event.all
+    @events = Event.where(user_id: params[:id])
   end
 end

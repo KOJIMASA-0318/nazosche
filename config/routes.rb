@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
   get 'users/show'
   get 'home/index'
   devise_for :users
 
   resources :users, :only => [:show] do
-
+      resources :events  
   end
 
   root to: "home#index"
