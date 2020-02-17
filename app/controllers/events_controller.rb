@@ -1,11 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  layout 'mypage'
 
   # GET /events
   # GET /events.json
   def index
     @user = User.where(:id => params[:user_id]).first
-    @events = Event.all
+    @events = current_user.events
   end
 
   # GET /events/1
@@ -17,7 +18,7 @@ class EventsController < ApplicationController
   def new
     #@event = Event.new
     @user = User.where(:id => params[:user_id]).first
-    @event = @user.events.new
+    @event = current_user.events.new
   end
 
   # GET /events/1/edit
@@ -66,11 +67,14 @@ class EventsController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @user = User.where(:id => params[:user_id]).first
-      @event = @user.events.where(:id => params[:id]).first
+      @event = current_user.events.where(:id => params[:id]).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
