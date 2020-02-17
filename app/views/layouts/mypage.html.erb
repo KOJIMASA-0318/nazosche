@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nazosche</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/notifications' %>
+    <body data-turbolinks="false">
+
+
+      <nav class="navbar navbar-default fixed-top navbar-bg">
+        <div class="container">
+          <%= link_to user_path(current_user) do %>
+            <span><%= image_tag "logo.png", class: "navbar-brand navbar-logo" %></span>
+          <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="menu">
+        <ul>
+          <li><%= link_to 'スケジュール', user_events_path(current_user) %></li>
+          <li><a href="#menu02">menu02</a></li>
+          <li><a href="#menu03">menu03</a></li>
+          <li><a href="#menu04">menu04</a></li>
+          <li><a href="#menu05">menu05</a></li>
+        </ul>
+      </div>
+
+      <div class="show-wrapper">
+        <div class="show-container">
+          <%= yield %>
+        </div>
+      </div>
+
+
+  </body>
+</html>
