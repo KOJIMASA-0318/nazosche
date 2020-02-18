@@ -22,8 +22,8 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.body %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
+        <td><%= event.start_date.strftime("%Y-%m-%d %H:%M")  %></td>
+        <td><%= event.end_date.strftime("%Y-%m-%d %H:%M")  %></td>
         <td><%= event.place %></td>
         <td><%= event.result %></td>
         <td><%= event.user_id %></td>

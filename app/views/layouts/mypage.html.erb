@@ -19,7 +19,8 @@
           <%= link_to user_path(current_user) do %>
             <span><%= image_tag "logo.png", class: "navbar-brand navbar-logo" %></span>
           <% end %>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right list-inline-item">
+            <li>ようこそ、<%= current_user.name %>さん</li>
             <li>
               <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
             </li>
@@ -30,8 +31,8 @@
       <div class="menu">
         <ul>
           <li><%= link_to 'スケジュール', user_events_path(current_user) %></li>
-          <li><a href="#menu02">menu02</a></li>
-          <li><a href="#menu03">menu03</a></li>
+          <li><%= link_to '参加予定イベント', user_upcoming_path(current_user) %></li>
+          <li><%= link_to '参加済イベント', user_past_path(current_user) %></li>
           <li><a href="#menu04">menu04</a></li>
           <li><a href="#menu05">menu05</a></li>
         </ul>
