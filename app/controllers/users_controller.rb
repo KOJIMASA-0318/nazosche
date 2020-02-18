@@ -7,5 +7,12 @@ class UsersController < ApplicationController
     @events = current_user.events
   end
 
+  def upcoming
+    @events = current_user.events.where('start_date >= ?',Time.zone.now).order(start_date: "DESC")
+  end
+
+  def past
+    @events = current_user.events.where('start_date <= ?',Time.zone.now).order(start_date: "DESC")
+  end
 
 end

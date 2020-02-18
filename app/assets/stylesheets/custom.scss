@@ -1,5 +1,6 @@
 body {
   background-color: #efefef;
+  font-family: "メイリオ";
 }
 
 /*フラッシュアラート*/
@@ -111,6 +112,7 @@ height: 45px;
   width: 200px;
   position: fixed;
   top: 120px;
+  left: 20px;
   z-index: 100;
 }
 
@@ -119,9 +121,49 @@ height: 45px;
   margin: 0 auto;
 }
 
+/*event-index*/
+.event-index-single {
+  background-color: #fff;
+  width: 900px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border: 1px solid #e6ecf0;
+  border-radius: 3px;
+  position: relative;
+
+  .event-datetime{
+    margin-bottom: 0;
+  }
+
+    img.result_icon {
+      width: 80px;
+      height: auto;
+      display: inline-block;
+      padding: 5px 5px;
+    }
+
+  .event-title {
+    display: inline-block;
+    padding: 10px 10px;
+    margin-bottom: 0;
+    text-decoration: none;
+
+
+    }
+}
+
+
+
+
 /*text*/
 .text-white {
   color:#ffffff;
+}
+
+.text-black {
+  color:#000000;
 }
 
 .text-red {
@@ -130,4 +172,12 @@ height: 45px;
 
 .small-letter {
   font-size: small;
+}
+
+.marker_water {
+  background: linear-gradient(transparent 90%, #66ccff 90%);
+}
+
+.no-underline {
+  text-decoration: none;
 }
