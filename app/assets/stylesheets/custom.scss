@@ -87,7 +87,7 @@ body {
   }
 }
 
-/*ナビゲーションバー*/
+/*navbar*/
 .navbar-logo {
 width: 120px;
 height: 45px;
@@ -97,7 +97,7 @@ height: 45px;
   background-color: #ffffff;
 }
 
-/*マイページ*/
+/*mypage*/
 .show-wrapper {
   padding-top: 70px;
 }
@@ -117,9 +117,62 @@ height: 45px;
 }
 
 .main {
-  width: 800px;
+  width: 820px;
   margin: 0 auto;
+  padding-top: 20px;
 }
+
+.main-box {
+  padding: 20px;
+  display: block;
+  margin-bottom: 20px;
+  background-color: #fff;
+
+  h1 {
+    display: inline;
+    margin-bottom: 3px;
+  }
+
+  .text-title-sub {
+    font-size: 15px;
+    color: #a9a9a9;
+    display: inline;
+  }
+}
+
+.left-box {
+  width: 400px;
+  margin-right: 20px;
+  float: left;
+}
+
+.right-box {
+  width: 400px;
+  float: left;
+}
+
+.clear {
+  clear:both;
+}
+
+.show-event-card {
+  padding: 10px;
+  margin: 10px;
+  background: #FFF;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  .text-title {
+    margin-bottom: 5px;
+  }
+}
+
+
+
 
 /*event-index*/
 .event-index-single {
@@ -149,12 +202,8 @@ height: 45px;
     padding: 10px 10px;
     margin-bottom: 0;
     text-decoration: none;
-
-
     }
 }
-
-
 
 
 /*text*/
@@ -168,6 +217,13 @@ height: 45px;
 
 .text-red {
   color:#ff0000;
+}
+
+.text-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .small-letter {

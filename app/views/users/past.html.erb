@@ -2,7 +2,7 @@
 
 <% @events.each do |event| %>
 <div class="event-index-single">
-  <p class=event-datetime><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催</p>
+  <p class="event-datetime"><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催</p>
     <% case event.result %>
     <% when "success" %>
       <img src="/assets/success.png" class="result_icon" alt="">
