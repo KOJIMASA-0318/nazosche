@@ -1,17 +1,52 @@
 <%= javascript_include_tag 'application' %>
 
     <div class="main">
-      <div class="box" id="menu01">
-        <h1>スケジュール</h1>
+      <div class="left-box">
+        <div class="main-box no-result-box">
+          <h1 class="text-title">結果記入待ちのイベント</h1>
+          <p class="text-title-sub">(直近5件)</p>
+          <% if @upcoming_events.presence %>
+            <% @no_result_events.each do |event| %>
+            <div class="show-event-card">
+              <p><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催</p>
+              <h4 class="text-title marker_water"><%= link_to event.title, user_event_path(current_user,event),:style=>"color:black;" %></h4>
+            </div>
+            <% end %>
+          <% else %>
+            <p>結果記入待ちのイベントはありません</p>
+          <% end %>
 
+        </div>
+      </div>
+
+      <div class="right-box">
+        <div class="main-box upcoming-box">
+          <h1 class="text-title">参加予定のイベント</h1>
+          <p class="text-title-sub">(直近5件)</p>
+          <% if @upcoming_events.presence %>
+            <% @upcoming_events.each do |event| %>
+            <div class="show-event-card">
+              <p><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催予定</p>
+              <h4 class="text-title marker_water"><%= link_to event.title, user_event_path(current_user,event),:style=>"color:black;" %></h4>
+            </div>
+            <% end %>
+          <% else %>
+            <p>参加予定のイベントはありません</p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="main-box calendar_box">
           <div id="calendar"></div>
+      </div>
 
-        <br>
 
         <%= link_to 'New Event', new_user_event_path(current_user) %>
 
         <!-- <div id="calendar"></div> -->
-
+        <div class="box" id="menu01">
         <h2>menu01</h2>
         <p><a href="#">ここに本文が入ります</a></p>
         <p><a href="#">ここに本文が入ります</a></p>

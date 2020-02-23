@@ -38,10 +38,8 @@
 
   <div class="field">
     <%= form.label :result %>
-    <%= form.text_field :result %>
+    <%= form.select :result, [["開催前", "upcoming"], ["成功", "success"], ["失敗", "failure"], ["参加済み", "joined"]]%>
   </div>
-
-
 
   <div class="actions">
     <%= form.submit %>
