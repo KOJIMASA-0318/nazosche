@@ -1,13 +1,16 @@
-<nav class="navbar navbar-default fixed-top navbar-bg">
-  <div class="container">
+<nav class="navbar navbar-light bg-light fixed-top">
+  <span class="navbar-brand">
     <%= link_to user_path(current_user) do %>
-      <span><%= image_tag "logo.png", class: "navbar-brand navbar-logo" %></span>
+      <%= image_tag "logo.png", class: "navbar-logo" %>
     <% end %>
-    <ul class="nav navbar-nav navbar-right list-inline-item">
-      <li>ようこそ、<%= current_user.name %>さん</li>
-      <li>
-        <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
-      </li>
-    </ul>
-  </div>
+  </span>
+  <ul class="navbar-nav mr-auto"></ul>
+  <span class="navbar-text">
+    ようこそ、<%= current_user.name %>さん
+  </span>
+  <form class="form-inline">
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <span class="btn btn-sm ml-2 btn-outline-secondary" >ログアウト</span>
+    <% end %>
+  </form>
 </nav>

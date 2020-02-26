@@ -1,12 +1,16 @@
 <%= javascript_include_tag 'application' %>
 
     <div class="main">
-      <div class="left-box">
-        <%= render :partial => "event_box", :locals => { event: @no_result_events, status: "結果記入待ち" } %>
-      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 left-box">
+            <%= render :partial => "event_box", :locals => { event: @no_result_events, status: "結果記入待ち" } %>
+          </div>
 
-      <div class="right-box">
-        <%= render :partial => "event_box", :locals => { event: @upcoming_events, status: "参加予定" } %>
+          <div class="col-md-6 right-box">
+            <%= render :partial => "event_box", :locals => { event: @upcoming_events, status: "参加予定" } %>
+          </div>
+        </div>
       </div>
 
       <div class="clear"></div>
@@ -19,50 +23,3 @@
         <%= link_to 'New Event', new_user_event_path(current_user) %>
 
         <!-- <div id="calendar"></div> -->
-        <div class="box" id="menu01">
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-      </div>
-    </div>

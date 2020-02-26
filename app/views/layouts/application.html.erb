@@ -14,20 +14,19 @@
     <body data-turbolinks="false">
     <%= render 'layouts/navbar' %>
 
-      <div class="menu">
-        <ul>
-          <li><%= link_to 'スケジュール', user_events_path(current_user) %></li>
-          <li><%= link_to '予定を追加する', new_user_event_path(current_user) %></li>
-          <li><%= link_to '参加予定のイベント', user_upcoming_path(current_user) %></li>
-          <li><%= link_to '参加済のイベント', user_past_path(current_user) %></li>
-          <li><a href="#menu04">menu04</a></li>
-          <li><a href="#menu05">menu05</a></li>
-        </ul>
-      </div>
+      <div class="container-fluid show-wrapper">
+        <div class="row">
+          <div class="col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+              <%= sidebar_list_items() %>
+            </ul>
+          </div>
 
-      <div class="show-wrapper">
-        <div class="show-container">
-          <%= yield %>
+          <div class="col-md-7 offset-md-2 show-container">
+            <%= yield %>
+          </div>
+
+          <div class="col-md-3" ></div>
         </div>
       </div>
 
