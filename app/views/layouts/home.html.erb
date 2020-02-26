@@ -8,27 +8,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= render 'layouts/notifications' %>
     <body data-turbolinks="false">
-    <%= render 'layouts/navbar' %>
-
-      <div class="container-fluid show-wrapper">
-        <div class="row">
-          <div class="col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-              <%= sidebar_list_items() %>
-            </ul>
-          </div>
-
-          <div class="col-md-7 offset-md-2 show-container">
-            <%= yield %>
-          </div>
-
-          <div class="col-md-3" ></div>
-        </div>
-      </div>
-
+    <%= yield %>
   </body>
 </html>
