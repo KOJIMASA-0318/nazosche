@@ -1,11 +1,10 @@
 class EventsController < ApplicationController
+  before_action :set_user
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  layout 'mypage'
 
   # GET /events
   # GET /events.json
   def index
-    @user = User.where(:id => params[:user_id]).first
     @events = current_user.events
   end
 
@@ -16,8 +15,6 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    #@event = Event.new
-    @user = User.where(:id => params[:user_id]).first
     @event = current_user.events.new
   end
 
@@ -28,7 +25,6 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @user = User.where(:id => params[:user_id]).first
     @event = @user.events.new(event_params)
     @event.user_id = params[:user_id]
 
@@ -67,18 +63,19 @@ class EventsController < ApplicationController
     end
   end
 
-
-
-
   private
+    def set_user
+      @user = User.find_by(id: params[:user_id])
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @user = User.where(:id => params[:user_id]).first
-      @event = current_user.events.where(:id => params[:id]).first
+      @event = current_user.events.find_by(:id => params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:title, :body, :start_date, :end_date, :place, :result)
     end
+
 end

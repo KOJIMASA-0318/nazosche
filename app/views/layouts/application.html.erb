@@ -8,9 +8,28 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
     <%= render 'layouts/notifications' %>
     <body data-turbolinks="false">
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+
+      <div class="menu">
+        <ul>
+          <li><%= link_to 'スケジュール', user_events_path(current_user) %></li>
+          <li><%= link_to '予定を追加する', new_user_event_path(current_user) %></li>
+          <li><%= link_to '参加予定のイベント', user_upcoming_path(current_user) %></li>
+          <li><%= link_to '参加済のイベント', user_past_path(current_user) %></li>
+          <li><a href="#menu04">menu04</a></li>
+          <li><a href="#menu05">menu05</a></li>
+        </ul>
+      </div>
+
+      <div class="show-wrapper">
+        <div class="show-container">
+          <%= yield %>
+        </div>
+      </div>
+
   </body>
 </html>
