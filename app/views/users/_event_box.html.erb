@@ -1,8 +1,8 @@
 <div class="main-box">
   <h1 class="text-title"><%= status %>のイベント</h1>
   <p class="text-title-sub">(直近5件)</p>
-  <% if event.presence %>
-    <% event.each do |event| %>
+  <% if events.presence %>
+    <% events.each do |event| %>
     <div class="show-event-card">
       <p><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催</p>
       <%= link_to user_event_path(current_user,event),:style=>"color: black;" do %>

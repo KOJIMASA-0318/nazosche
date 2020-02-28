@@ -25,7 +25,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbar-list-menu">
     <ul class="navbar-nav nav nav-sidebar mr-auto mt-2 mt-lg-0">
-      <%= sidebar_list_items() %>
+      <%= render 'layouts/sidebar' %>
       <li>
         <%= link_to edit_user_registration_path do %>
           <span>ユーザー設定</span>

@@ -4,11 +4,11 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 left-box">
-            <%= render :partial => "event_box", :locals => { event: @no_result_events, status: "結果記入待ち" } %>
+            <%= render partial: "event_box", locals: { events: @no_result_events, status: "結果記入待ち" } %>
           </div>
 
           <div class="col-lg-6 right-box">
-            <%= render :partial => "event_box", :locals => { event: @upcoming_events, status: "参加予定" } %>
+            <%= render partial: "event_box", locals: { events: @upcoming_events, status: "参加予定" } %>
           </div>
         </div>
       </div>

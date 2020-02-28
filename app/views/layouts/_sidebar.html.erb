@@ -1,0 +1,15 @@
+<li <%= %Q(class= active) if request.path == user_events_path(current_user) %>>
+  <%= link_to "カレンダー", user_events_path(current_user) %>
+</li>
+
+<li <%= %Q(class= active) if request.path == new_user_event_path(current_user) %>>
+  <%= link_to "予定を追加する", new_user_event_path(current_user) %>
+</li>
+
+<li <%= %Q(class= active) if request.path == user_upcoming_path(current_user) %>>
+  <%= link_to "参加予定イベント", user_upcoming_path(current_user) %>
+</li>
+
+<li <%= %Q(class= active) if request.path == user_past_path(current_user) %>>
+  <%= link_to "参加済イベント", user_past_path(current_user) %>
+</li>
