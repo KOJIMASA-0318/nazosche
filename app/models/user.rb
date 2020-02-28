@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true,  uniqueness: true
+  VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
 
+  validates :name, presence: true, uniqueness: true, format: { with: VALID_PASSWORD_REGEX }, length: { minimum: 4 }
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
+  
   has_many :events
 end

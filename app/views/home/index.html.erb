@@ -1,12 +1,13 @@
-<div class ="top-wrapper">
-  <div class="column fifty-left text-center">
-  </div>
-  <div class="column fifty-right text-center">
-    <h1 class ="home-title">謎スケ</h1>
-    <h2 class="text-black small-letter">謎スケは謎解き・脱出ゲームの参加記録ができるスケジュールサービスです</h2>
-    <div class="home-btn text-center">
-      <%= link_to 'アカウント作成', new_user_registration_path, class: 'btn btn-primary btn-block' %>
-      <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-outline-dark btn-block' %>
+<div class="text-center">
+  <%= image_tag "primary_logo.png", class: "home-logo" %>
+  <h2 class="text-black small-letter">謎スケは謎解き・脱出ゲームの参加記録ができるシンプルなスケジュールサービスです</h2>
+  <div class="container">
+    <div class="row">
+        <div class="home-btn text-center col-10 offset-1">
+          <%= link_to '謎スケをはじめる！', new_user_registration_path, class: 'btn btn-primary btn-block' %>
+          <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-outline-dark btn-block' %>
+        </div>
+        <div class="col-1"></div>
     </div>
   </div>
 </div>

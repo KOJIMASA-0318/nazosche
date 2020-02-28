@@ -15,6 +15,16 @@
   <body>
     <%= render 'layouts/notifications' %>
     <body data-turbolinks="false">
-    <%= yield %>
+
+    <div class ="top-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="column fifty-left text-center col-lg-6 d-none d-lg-block"></div>
+            <div class="column fifty-right col-lg-6 offset-lg-6">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+    </div>
   </body>
 </html>

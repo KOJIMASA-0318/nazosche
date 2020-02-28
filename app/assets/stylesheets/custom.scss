@@ -13,11 +13,6 @@ body {
 
 
 /*home*/
-@media all and (min-width: 500px) {
-  .top-wrapper {
-    display: flex;
-  }
-}
 
 .column {
   height: 100vh;
@@ -31,28 +26,33 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: fixed;
 }
 
 .fifty-right {
   background-size: cover;
-  padding: 5vh;
 }
 
-.home-title {
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+.home-logo{
+  width: 50%;
+  height: auto;
 }
 
-.home-btn{
-  height: 30vh;
-  padding: 5vh;
-  margin: 10vh 5vh;
+.home-btn {
+  margin-top: 8vh;
 
-  .btn {
-    margin-bottom:8vh;
+ .btn {
+      margin-bottom:5vh;
   }
+}
 
+/*signup,signin*/
+
+.home-sub-logo{
+  max-width: 20%;
+  height: auto;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
 }
 
 .btn {
@@ -60,9 +60,10 @@ body {
 }
 
 .input-form {
-  height: 55vh;
+  height: auto;
   padding: 3vh;
-  margin: 3vh 5vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
   background-color: #b0c4de;
   text-align: left;
 
@@ -75,29 +76,22 @@ body {
   height: 45px;
 }
 
-.login-form {
-  height: 40vh;
-  padding: 5vh 5vh;
-  margin: 10vh 5vh 5vh 5vh;
-  background-color: #b0c4de;
-  text-align: left;
-
-  .form-group {
-  margin-bottom: 3vh;
-  }
+.actions{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 /*navbar*/
 
 .navbar-logo {
-width: 120px;
-height: 35px;
+width: 100px;
+height: auto;
 margin-left: 40px;
 }
 
 
 /*sidebar*/
-/*768px以下の場合*/
+/*992px以下の場合*/
 .sidebar {
   display: none;
 }
@@ -127,7 +121,7 @@ margin-left: 40px;
 }
 
 /*sidebar*/
-/*768px以上の場合*/
+/*992px以上の場合*/
 
 @media (min-width: 992px) {
   .navbar-content {
