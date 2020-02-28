@@ -14,8 +14,8 @@ module ApplicationHelper
     items = [
       {:text => 'カレンダー',   :path => user_events_path(current_user)},
       {:text => '予定を追加する',   :path => new_user_event_path(current_user)},
-      {:text => '参加予定のイベント',   :path => user_upcoming_path(current_user)},
-      {:text => '参加済のイベント',   :path => user_past_path(current_user)}
+      {:text => '参加予定イベント',   :path => user_upcoming_path(current_user)},
+      {:text => '参加済イベント',   :path => user_past_path(current_user)}
     ]
 
     html = ''

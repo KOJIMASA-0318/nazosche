@@ -4,9 +4,13 @@
     <title>Nazosche</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+
+    <meta name="viewport" content="width=device-width">
+
   </head>
 
   <body>
@@ -16,17 +20,17 @@
 
       <div class="container-fluid show-wrapper">
         <div class="row">
-          <div class="col-md-2 sidebar">
+          <div class="col-lg-2 sidebar">
             <ul class="nav nav-sidebar">
               <%= sidebar_list_items() %>
             </ul>
           </div>
 
-          <div class="col-md-7 offset-md-2 show-container">
+          <div class="col-lg-7 offset-lg-2 show-container">
             <%= yield %>
           </div>
 
-          <div class="col-md-3" ></div>
+          <div class="col-lg-3" ></div>
         </div>
       </div>
 
