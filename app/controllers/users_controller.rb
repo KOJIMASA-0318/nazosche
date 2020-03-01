@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @events = current_user.events
-    @no_result_events = @events.in_past.limit 5
+    @no_result_events = @events.no_result.limit 5
     @upcoming_events = @events.in_upcoming.limit 5
   end
 
@@ -14,6 +14,10 @@ class UsersController < ApplicationController
 
   def past
     @events = current_user.events.in_past
+  end
+
+  def no_result
+    @events = current_user.events.no_result
   end
 
 end

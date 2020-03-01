@@ -1,4 +1,4 @@
-<h1>参加済みのイベント</h1>
+<h1 class="content-title">参加済みのイベント</h1>
 
 <% @events.each do |event| %>
 <div class="event-index-single">
@@ -12,7 +12,7 @@
 
 
   <%= link_to user_event_path(current_user, event), style: "color:black;" do %>
-    <h3 class="event-title marker_water"><%= event.title %></h3>
+    <h3 class="event-title marker_water"><%= event.title.truncate(24) %></h3>
   <% end %>
 
 </div>

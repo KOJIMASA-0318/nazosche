@@ -13,3 +13,7 @@
 <li <%= %Q(class= active) if request.path == user_past_path(current_user) %>>
   <%= link_to "参加済イベント", user_past_path(current_user) %>
 </li>
+
+<li <%= %Q(class= active) if request.path == user_noresult_path(current_user) %>>
+  <%= link_to "結果待ちイベント", user_noresult_path(current_user) %>
+</li>
