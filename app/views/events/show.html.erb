@@ -1,45 +1,43 @@
-<p id="notice"><%= notice %></p>
+<h1 class="content-title">イベント詳細</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<div class="main-box">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @event.body %>
-</p>
+  <h3 class="event-title"><span class=" marker_water"><%= @event.title %></span></h3>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
+  <p>
+    <strong>開始日時:</strong>
+    <%= @event.start_date.strftime("%Y-%m-%d %H:%M")  %>
+  </p>
 
-<p>
-  <strong>Place:</strong>
-  <%= @event.place %>
-</p>
+  <p>
+    <strong>終了日時:</strong>
+    <%= @event.end_date.strftime("%Y-%m-%d %H:%M")  %>
+  </p>
 
-<p>
-  <strong>Result:</strong>
-  <%= @event.result %>
-</p>
+  <p>
+    <strong>場所:</strong>
+    <%= @event.place %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @event.user_id %>
-</p>
+  <p>
+    <strong>結果:</strong>
+    <%= @event.result %>
+  </p>
 
-<p>
-  <%= link_to '編集', edit_user_event_path(user_id: current_user) %>
-  <%= link_to '削除', user_event_path(user_id: current_user), method: :delete, data: { confirm: '削除してよろしいですか?' } %>
-</p>
 
-<p>
-  <%= link_to 'イベント一覧に戻る', user_events_path(user_id: current_user) %>
-</p>
+  <p>
+    <strong>メモ:</strong>
+    <%= @event.body %>
+  </p>
+
+  <p>
+    <%= link_to '編集', edit_user_event_path(user_id: current_user) %>
+    <%= link_to '削除', user_event_path(user_id: current_user), method: :delete, data: { confirm: '削除してよろしいですか?' } %>
+  </p>
+
+  <p>
+    <%= link_to 'イベント一覧に戻る', user_events_path(user_id: current_user) %>
+  </p>
+</div>

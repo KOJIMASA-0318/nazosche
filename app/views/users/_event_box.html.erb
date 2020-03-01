@@ -6,7 +6,7 @@
     <div class="show-event-card">
       <p><%= event.start_date.strftime("%Y-%m-%d %H:%M") %>　開催</p>
       <%= link_to user_event_path(current_user,event),:style=>"color: black;" do %>
-       <h4 class="text-title marker_water"><%= event.title %></h4>
+       <h4 class="text-title marker_water"><%= event.title.truncate(14) %></h4>
       <% end %>
     </div>
     <% end %>
