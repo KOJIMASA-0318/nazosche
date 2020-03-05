@@ -2,8 +2,6 @@
   <%= form_with(model: [@user,@event],local: true) do |form| %>
     <% if event.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
         <ul>
           <% event.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -13,32 +11,32 @@
     <% end %>
 
     <div class="field">
-      <%= form.label :title, "イベント名" %>
+      <%= form.label :title %>
       <%= form.text_field :title, {class: "form-control"} %>
     </div>
 
     <div class="field">
-      <%= form.label :start_date, "開始日時" %><br>
+      <%= form.label :start_date %><br>
       <%= form.datetime_select :start_date %>
     </div>
 
     <div class="field">
-      <%= form.label :end_date, "終了日時" %><br>
+      <%= form.label :end_date %><br>
       <%= form.datetime_select :end_date, {class: "form-control" }  %>
     </div>
 
     <div class="field">
-      <%= form.label :place, "場所" %>
+      <%= form.label :place %>
       <%= form.text_field :place, {class: "form-control"} %>
     </div>
 
     <div class="field">
-      <%= form.label :result, "ステータス・結果" %><br>
+      <%= form.label :result %><br>
       <%= form.select :result, [["開催前", "upcoming"], ["成功", "success"], ["失敗", "failure"], ["参加済み", "joined"]], {class: "form-control"}%>
     </div>
 
     <div class="field">
-      <%= form.label :body, "メモ"  %>
+      <%= form.label :body %>
       <%= form.text_area :body,{class: "form-control"} %>
     </div>
 
