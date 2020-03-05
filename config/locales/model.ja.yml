@@ -2,8 +2,17 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      event: イベント
     attributes:
         user:
           id: ID
           name: ユーザー名
           email: メールアドレス
+        event:
+          title: イベント名
+          body: メモ
+          start_date: 開始日時
+          end_date: 終了日時
+          place: 場所
+          result: ステータス・結果
+          user_id: ユーザーID
