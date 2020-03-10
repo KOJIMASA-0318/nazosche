@@ -11,31 +11,35 @@
   </span>
   <form class="form-inline navbar-content">
     <%= link_to edit_user_registration_path do %>
-      <span class="btn btn-sm ml-2 btn-outline-secondary" >ユーザー設定</span>
+      <span class="btn btn-sm ml-2 btn-outline-secondary"><i class="fas fa-user"></i> ユーザー設定</span>
     <% end %>
   </form>
   <form class="form-inline navbar-content">
     <%= link_to destroy_user_session_path, method: :delete do %>
-      <span class="btn btn-sm ml-2 btn-outline-secondary" >ログアウト</span>
+      <span class="btn btn-sm ml-2 btn-outline-secondary"><i class="fas fa-sign-out-alt"></i> ログアウト</span>
     <% end %>
   </form>
 
   <button type="button" class="navbar-toggler d-lg-none" data-toggle="collapse" data-target="#navbar-list-menu" aria-controls="navbar-list-menu" aria-expanded="false" aria-label="レスポンシブ・ナビゲーションバー">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbar-list-menu">
     <ul class="navbar-nav nav nav-sidebar mr-auto mt-2 mt-lg-0">
       <%= render 'layouts/sidebar' %>
-      <li>
-        <%= link_to edit_user_registration_path do %>
-          <span>ユーザー設定</span>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <span>ログアウト</span>
-        <% end %>
-      </li>
+
+      <div class="card-footer">
+        <li>
+          <%= link_to edit_user_registration_path do %>
+           <i class="fas fa-user"></i> ユーザー設定
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+           <i class="fas fa-sign-out-alt"></i> ログアウト
+          <% end %>
+        </li>
+      </div>
     </ul>
   </div>
 
