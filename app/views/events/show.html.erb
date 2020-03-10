@@ -23,7 +23,7 @@
 
   <p>
     <strong>結果:</strong>
-    <%= @event.result %>
+    <%= result_ja(@event.result) %>
   </p>
 
 
@@ -38,6 +38,6 @@
   </p>
 
   <p>
-    <%= link_to 'イベント一覧に戻る', user_events_path(user_id: current_user) %>
+    <%= link_to 'カレンダーに戻る', user_events_path(user_id: current_user) %>
   </p>
 </div>
