@@ -12,7 +12,7 @@
 
     <div class="field">
       <%= form.label :title %>
-      <%= form.text_field :title, {class: "form-control"} %>
+      <%= form.text_field :title, class: "form-control" %>
     </div>
 
     <div class="field">
@@ -22,12 +22,12 @@
 
     <div class="field">
       <%= form.label :end_date %><br>
-      <%= form.datetime_select :end_date, {class: "form-control" }  %>
+      <%= form.datetime_select :end_date, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= form.label :place %>
-      <%= form.text_field :place, {class: "form-control"} %>
+      <%= form.text_field :place, class: "form-control" %>
     </div>
 
     <div class="field">
@@ -37,7 +37,7 @@
 
     <div class="field">
       <%= form.label :body %>
-      <%= form.text_area :body,{class: "form-control"} %>
+      <%= form.text_area :body, :rows => "5", class: "form-control" %>
     </div>
 
     <div class="actions">
