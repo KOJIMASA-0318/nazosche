@@ -35,6 +35,7 @@ gem 'devise-i18n-views'
 gem "rails-i18n"
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'font-awesome-sass'
 
 
 group :development, :test do

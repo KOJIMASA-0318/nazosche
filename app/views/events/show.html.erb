@@ -5,32 +5,45 @@
 
   <h3 class="event-title"><span class=" marker_water"><%= @event.title %></span></h3>
 
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <p>
+          <td><strong>開始日時</strong></td>
+          <td><%= @event.start_date.strftime("%Y-%m-%d %H:%M")  %></td>
+        </p>
+      </tr>
 
-  <p>
-    <strong>開始日時:</strong>
-    <%= @event.start_date.strftime("%Y-%m-%d %H:%M")  %>
-  </p>
+      <tr>
+        <p>
+          <td><strong>終了日時</strong></td>
+          <td><%= @event.end_date.strftime("%Y-%m-%d %H:%M")  %></td>
+        </p>
+      </tr>
 
-  <p>
-    <strong>終了日時:</strong>
-    <%= @event.end_date.strftime("%Y-%m-%d %H:%M")  %>
-  </p>
+      <tr>
+        <p>
+          <td><strong>場所</strong></td>
+          <td><%= @event.place %></td>
+        </p>
+      <tr>
 
-  <p>
-    <strong>場所:</strong>
-    <%= @event.place %>
-  </p>
+      <tr>
+        <p>
+          <td><strong>結果</strong></td>
+          <td><%= result_ja(@event.result) %></td>
+        </p>
+      </tr>
 
-  <p>
-    <strong>結果:</strong>
-    <%= result_ja(@event.result) %>
-  </p>
+      <tr>
+        <p>
+          <td><strong>メモ</strong></td>
+          <td><%= simple_format(@event.body) %></td>
+        </p>
+      </tr>
 
-
-  <p>
-    <strong>メモ:</strong>
-    <%= @event.body %>
-  </p>
+    <table>
+  </div>
 
   <p>
     <%= link_to '編集', edit_user_event_path(user_id: current_user) %>
