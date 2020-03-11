@@ -1,19 +1,38 @@
 <li <%= %Q(class= active) if request.path == user_events_path(current_user) %>>
-  <%= link_to "カレンダー", user_events_path(current_user) %>
+  <%= link_to user_events_path(current_user) do %>
+  <i class="far fa-calendar-alt"></i>カレンダー
+  <% end %>
 </li>
 
 <li <%= %Q(class= active) if request.path == new_user_event_path(current_user) %>>
-  <%= link_to "予定を追加する", new_user_event_path(current_user) %>
+  <%= link_to  new_user_event_path(current_user) do %>
+  <i class="fas fa-pencil-alt"></i>予定を追加
+  <% end %>
 </li>
 
-<li <%= %Q(class= active) if request.path == user_upcoming_path(current_user) %>>
-  <%= link_to "参加予定イベント", user_upcoming_path(current_user) %>
-</li>
 
-<li <%= %Q(class= active) if request.path == user_past_path(current_user) %>>
-  <%= link_to "参加済イベント", user_past_path(current_user) %>
-</li>
+<div class="dropdown">
+  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-shapes"></i>イベント一覧
+  </a>
 
-<li <%= %Q(class= active) if request.path == user_noresult_path(current_user) %>>
-  <%= link_to "結果待ちイベント", user_noresult_path(current_user) %>
-</li>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li <%= %Q(class= active) if request.path == user_upcoming_path(current_user) %>>
+      <%= link_to user_upcoming_path(current_user) do %>
+        <i class="fas fa-caret-right"></i>参加予定
+      <% end %>
+    </li>
+
+    <li <%= %Q(class= active) if request.path == user_past_path(current_user) %>>
+      <%= link_to user_past_path(current_user) do %>
+      <i class="fas fa-caret-right"></i>参加済み
+      <% end %>
+    </li>
+
+    <li <%= %Q(class= active) if request.path == user_noresult_path(current_user) %>>
+      <%= link_to user_noresult_path(current_user) do %>
+        <i class="fas fa-caret-right"></i>結果記入待ち
+      <% end %>
+    </li>
+  </div>
+</div>
